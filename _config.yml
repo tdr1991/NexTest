@@ -4,12 +4,13 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
+title: 汤达荣个人主页
 subtitle:
 description:
-author: John Doe
+author: 汤达荣
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+#language: en
+language: zh-Hans
 date_format: '%Y-%m-%d'
 
 # URL
@@ -40,8 +41,6 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "
 # Code Highlighter
 ## 'pygments' is unsupported on GitHub Pages now.
 highlighter: rouge
-highlight:
-  line_number: true
 
 #### Markdown Processors
 ## 'redcarpet' is unsupported on GitHub Pages now.
@@ -67,6 +66,7 @@ feed:
 # Plugins
 ## Docs: https://help.github.com/articles/configuring-jekyll-plugins/
 plugins:
+# jemoji conficts with toc in some no-ascii post
  - jemoji
  - jekyll-sitemap
  - jekyll-feed
@@ -118,12 +118,13 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
-  #about: /about/
+  categories: /categories/
+  about: /about/
   archives: /archives/
   tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
+  publications: /publications/
 
 
 # Enable/Disable menu icons.
@@ -213,8 +214,9 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
+  GitHub: https://github.com/tdr1991
 
 
 # Social Links Icons
@@ -229,11 +231,12 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  
 
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+avatar: /assets/images/avatar.jpg 
 
 
 # Table Of Contents in the Sidebar
@@ -281,11 +284,13 @@ sidebar:
 
 
 # Blog rolls
-#links_title: Links
+links_title: Links
 #links_layout: block
 #links_layout: inline
-#links:
+links:
   #Title: http://example.com/
+  NexT: http://theme-next.simpleyyt.com/
+
 
 
 # ---------------------------------------------------------------
@@ -362,7 +367,7 @@ highlight_theme: normal
 
 # MathJax Support
 mathjax:
-  enable: false
+  enable: true
   per_page: false
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
@@ -505,7 +510,7 @@ leancloud_visitors:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -560,7 +565,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -702,6 +707,9 @@ vendors:
   # https://github.com/ethantw/Han
   han:
 
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /assets/images/wechatpay.png
+alipay: /assets/images/alipay.jpg
 
 # Assets
 css: assets/css
